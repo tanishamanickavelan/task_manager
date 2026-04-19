@@ -6,10 +6,8 @@ A full-stack Task Manager web application built with **FastAPI** (Python) for th
 
 ## 🌐 Live Demo
 
-> **Frontend:** [https://your-app.onrender.com](https://your-app.onrender.com)  
-> **API Docs:** [https://your-app.onrender.com/docs](https://your-app.onrender.com/docs)
-
-*(Replace with your actual Render URL after deploying)*
+> **Frontend:** [https://task-manager-frontend-61c6.onrender.com](https://task-manager-frontend-61c6.onrender.com)
+> **API Docs:** [https://task-manager-api-e4ec.onrender.com/docs](https://task-manager-api-e4ec.onrender.com/docs)
 
 ---
 
@@ -88,8 +86,8 @@ Create a `.env` file inside the `backend/` folder based on `.env.example`:
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/task-manager.git
-cd task-manager
+git clone https://github.com/tanishamanickavelan/task_manager.git
+cd task_manager
 ```
 
 ### 2. Set up the backend
@@ -184,24 +182,26 @@ Visit `http://localhost:8000`
 
 ---
 
-## ☁️ Deployment on Render
+## ☁️ Deployment (Render)
 
-1. Push this repo to GitHub (public)
-2. Go to [render.com](https://render.com) → **New Web Service**
-3. Connect your GitHub repository
-4. Configure:
-   - **Root directory:** `backend`
-   - **Build command:** `pip install -r requirements.txt`
-   - **Start command:** `uvicorn app.main:app --host 0.0.0.0 --port $PORT`
-5. Add environment variables in Render dashboard:
-   - `SECRET_KEY` → any long random string
-   - `DATABASE_URL` → `sqlite:///./taskmanager.db`
-6. Deploy!
+### Backend (Web Service)
+| Field | Value |
+|---|---|
+| Root Directory | `backend` |
+| Build Command | `pip install -r requirements.txt` |
+| Start Command | `uvicorn app.main:app --host 0.0.0.0 --port $PORT` |
 
-For the frontend, create a **Render Static Site**:
-- **Root directory:** `frontend`
-- **Publish directory:** `frontend`
-- Update the `API` variable in `frontend/index.html` to your Render backend URL
+Environment variables to add:
+- `SECRET_KEY` → any long random string
+- `DATABASE_URL` → `sqlite:///./taskmanager.db`
+- `PYTHON_VERSION` → `3.11.0`
+
+### Frontend (Static Site)
+| Field | Value |
+|---|---|
+| Root Directory | *(leave blank)* |
+| Publish Directory | `frontend` |
+| Build Command | *(leave blank)* |
 
 ---
 
